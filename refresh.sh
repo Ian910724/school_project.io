@@ -10,4 +10,4 @@ git add .
 git commit -m "Auto upload files"
 
 # 推送到遠端存儲庫
-git push origin data_base
+git push origin master:data_base/passenger
