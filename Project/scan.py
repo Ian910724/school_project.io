@@ -33,8 +33,8 @@ while True:
         itemList = item.split(',')
         #itemKey = itemList[1] + ':' + str(itemList[2]) + ':' + str(itemList[3])
         LowerItemList = itemList[1].lower()
-        itemKey = "ID" +  LowerItemList[:8] + "-" + LowerItemList[8:12] + "-" + LowerItemList[12:16] + "-" + LowerItemList[16:20] + "-" + LowerItemList[20:]
-
+        # itemKey = "ID" +  LowerItemList[:8] + "-" + LowerItemList[8:12] + "-" + LowerItemList[12:16] + "-" + LowerItemList[16:20] + "-" + LowerItemList[20:]
+        itemKey = LowerItemList[:8] + "-" + LowerItemList[8:12] + "-" + LowerItemList[12:16] + "-" + LowerItemList[16:20] + "-" + LowerItemList[20:]
         if itemKey in rssiDict:
             rssiDict[itemKey]['count'] += 1
             rssiDict[itemKey]['total_rssi'] += int(itemList[-1])
